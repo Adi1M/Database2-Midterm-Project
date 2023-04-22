@@ -1,0 +1,1 @@
+-- Create a trigger before insert on any entity which will show the current number of rows in the table
