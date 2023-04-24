@@ -1,0 +1,28 @@
+-Introduction
+Welcome to "The Bookshelf", your go-to bookstore for all your reading needs!
+Our shop offers a vast collection of books in different categories, including classic literature, modern fiction, non-fiction, and children's books.
+We also have a team of knowledgeable staff who are passionate about books and are always ready to help you find the perfect read.
+
+- Explanation of why the structure follows normal forms
+
+1.	Category:
+This table has a single primary key column, 'category_id', and a single non-key column, 'category_name'. This means it is in First Normal Form (1NF). It is also in Second Normal Form (2NF) because there are no partial dependencies, meaning that each non-key column is dependent on the entire primary key. There are no transitive dependencies, so it is also in Third Normal Form (3NF).
+
+2.	Publisher:
+This table has a single primary key column, 'publisher_id', and two non-key columns, 'publisher_name' and 'address'. It is in 1NF because each column has an atomic value. It is in 2NF because 'publisher_name' and 'address' are dependent only on the primary key column. It is also in 3NF because there are no transitive dependencies.
+
+3.	Author:
+This table has a single primary key column, 'author_id', and two non-key columns, 'author_name' and 'contact_information'. It is in 1NF because each column has an atomic value. It is in 2NF because 'author_name' and 'contact_information' are dependent only on the primary key column. It is also in 3NF because there are no transitive dependencies.
+
+4.	Customer:
+This table has a single primary key column, 'customer_id', and three non-key columns, 'customer_name', 'address', and 'contact_information'. It is in 1NF because each column has an atomic value. It is in 2NF because 'customer_name', 'address', and 'contact_information' are dependent only on the primary key column. It is also in 3NF because there are no transitive dependencies.
+
+5.	OrderHeader:
+This table has a single primary key column, 'order_id', and two non-key columns, 'order_date' and 'customer_id'. It is in 1NF because each column has an atomic value. It is in 2NF because 'order_date' and 'customer_id' are dependent only on the primary key column. It is also in 3NF because there are no transitive dependencies.
+
+6.	Book:
+This table has a single primary key column, 'book_id', and five non-key columns, 'title', 'author_id', 'category_id', 'publisher_id', and 'price'. It is in 1NF because each column has an atomic value. It is in 2NF because 'title', 'author_id', 'category_id', 'publisher_id', and 'price' are dependent only on the primary key column. It is also in 3NF because there are no transitive dependencies.
+
+7.	OrderDetail:
+This table has a single primary key column, 'order_detail_id', and four non-key columns, 'order_id', 'book_id', 'quantity', and 'price'. It is in 1NF because each column has an atomic value. It is in 2NF because 'order_id', 'book_id', 'quantity', and 'price' are dependent only on the primary key column. It is also in 3NF because there are no transitive dependencies.
+
