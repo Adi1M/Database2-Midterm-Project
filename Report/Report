@@ -26,3 +26,20 @@ This table has a single primary key column, 'book_id', and five non-key columns,
 7.	OrderDetail:
 This table has a single primary key column, 'order_detail_id', and four non-key columns, 'order_id', 'book_id', 'quantity', and 'price'. It is in 1NF because each column has an atomic value. It is in 2NF because 'order_id', 'book_id', 'quantity', and 'price' are dependent only on the primary key column. It is also in 3NF because there are no transitive dependencies.
 
+
+- TRIGGERS
+
+before_insert_show_row_count - These triggers are responsible for executing the 'show_row_count' function, that will count number of rows before insert.
+
+change_numberof_quantity -  This trigger is responsible for executing the 'change_quantity' function, that will take quantity from 'orderdetail' table and minus from quantity in table 'book'.
+example: if we have 50 copies of 'The Da Vinci Code' and someone bye 3 copies of 'The Da Vinci Code', in 'book' table quantity of this book will be 47.
+
+- PROCEDURES
+
+group_books_by_publisher() - Procedure which does group by information
+
+update_book_price() - Procedure which uses ROW_COUNT to determine the number of rows affected
+
+- FUNCTIONS
+
+check_title_length() - This function work with its trigger, if title's length less than 5 , then raise USER DEFINED EXCEPTION
